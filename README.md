@@ -124,7 +124,7 @@ jupyter notebook
 The above steps create a notebook directory and starts the Jupyter server with a default notebook.
 
 You can now access your Jupyter server in your browser with the following URL: 
-* https://<Your-Instances-Public-IP>:8888
+* https://Your-Instances-Public-IP:8888
 
 You will then see a Jupyter dashboard without any notebooks. You can now create a new blank notebook, however, for this tuotiral we are going to import a training notebook to get you started with Jupyter.
 
