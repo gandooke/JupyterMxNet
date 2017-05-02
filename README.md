@@ -126,10 +126,7 @@ The above steps create a notebook directory and starts the Jupyter server with a
 You can now access your Jupyter server in your browser with the following URL: 
 * https://your-instances-public-ip:8888
 
-
-![Jupyter Notebook](https://s3-us-west-2.amazonaws.com/mxnetjupytersetup/JupyterNotebook.jpg)
-
-
+You will then see a Jupyter dashboard without any notebooks. You can now create a new blank notebook, however, for this tuotiral we are going to import a training notebook to get you started with Jupyter.
 
 ## Setting up The Training Jupyter Notebook
 
@@ -142,7 +139,9 @@ You can clone this notebook into your own instance by running the following comm
 cd /home/ec2-user/notebook
 git clone https://github.com/gandooke/JupyterMxNet/blob/master/ConfiguringJupyterOnAmazonDeepLearningAMI%20(2).ipynb
 ```
-You can then launch the notebook and continue with the Jupyter tutorial.
+![Jupyter Notebook](https://s3-us-west-2.amazonaws.com/mxnetjupytersetup/JupyterNotebook.jpg)
+
+You can then launch the notebook by clicking on it and continue with the Jupyter tutorial.
 
 ## To-Do Sections:
 - [x] Deploy an AWS Deep Learning instance 
