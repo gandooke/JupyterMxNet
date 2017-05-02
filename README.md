@@ -141,6 +141,8 @@ You can now access your Jupyter server in your browser with the following URL:
 ## To-Do Sections:
 Now that you have launched the AWS Deep Learning AMI, and configured Jupyter you can run the next tutorials for learning how to use Jupyter, and many other MXNet tutorials. Check out the MXNet GitHub Repo ( https://github.com/dmlc/mxnet-notebooks) for tutorials that make it easy to start using Jupyter for computer vision, natural language processing, and recommendation systems. This GitHub repo contains a Jupyter notebook that will teach you how to import the MXNet tutorials as well as basic  Jupyter commands. 
 
+*[a relative link](other_file.md)
+
 - [x] Deploy an AWS Deep Learning instance 
 - [x] Setup Jupyter on your own AWS Deep Learning instance
 - [ ] Create your first Jupyter notebook
