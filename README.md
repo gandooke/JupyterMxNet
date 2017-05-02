@@ -7,7 +7,9 @@ Launch an instance using the Amazon Deep Learning AMI using the AWS console:
 * https://aws.amazon.com/marketplace/pp/B01M0AXXQB
 
 Navigate to the AWS Management Console:
+
 ![AWS Managment Console](https://s3-us-west-2.amazonaws.com/mxnetjupytersetup/Untitled.jpg)
+
 Or Launch the Amazon Deep Learning AMI from a CloudFormation Script:
 * https://github.com/awslabs/deeplearning-cfn/blob/master/cfn-template/deeplearning.template
 
