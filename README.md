@@ -32,7 +32,7 @@ You should update the Source IPs to your own know Source IPs, it is NOT best pra
 
 Optionally, you can create the security group using the AWS CLI beforehand and attach it to the instance. Keep in mind you need to update these commands to suit your own needs. In this tutorial we are using the latest Deep Learning AMI 2.0 (ami-dfb13ebf) in the us-west-2 region. The CLI commands for this are as follows:
 
-```
+```{r, engine='bash', count_lines}
 #Setup the AWS CLI on your instance
 aws configure
 #Enter your access key and secret key 
@@ -54,18 +54,18 @@ aws ec2 run-instances --image-id ami-dfb13ebf --count 1 --instance-type p2.xlarg
 
 SSH into the instance using the instances DNS name
 
-```
+```{r, engine='bash', count_lines}
 ssh -i <PATH_TO_PEM> ec2-user@ec2-xx-xxx-xx-xxx.us-west-2.compute.amazonaws.com
 ```
 
 Use the AMI's pre installed Anaconda3 environment managment tool to activate a default environment named "root" with the following command:
-```
+```{r, engine='bash', count_lines}
 
 source src/anaconda3/bin/activate root
 ```
 
 Verify that your environment is using the correct binaries with the following commands:
-```
+```{r, engine='bash', count_lines}
 
 which python
 ~/src/anaconda3/bin/python
@@ -74,7 +74,7 @@ which  jupyter
 ```
 
 If they are not pointing to the correct binaries change the PATH definition to the following:
-```
+```{r, engine='bash', count_lines}
 
 PATH=$HOME/src/anaconda3/bin:$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
@@ -83,14 +83,14 @@ export PATH
 ## Configure The Jupyter Server To Use HTTPS
 
 Now that you have your AMI launched and your environment setup correctly we can begin to generate the configuration for Jupyter. In this tutorial, we will setup the configuration using HTTPS. If you want to use regular HTTP you can skip the following steps.
-```
+```{r, engine='bash', count_lines}
 
 jupyter notebook --generate-config
 key=$(python -c "from notebook.auth import passwd; print(passwd())")
 ```
 
 Create a directory for your server certificates then use OpenSSL to self-sign a certificate
-```
+```{r, engine='bash', count_lines}
 
 cd ~
 mkdir certs
@@ -114,7 +114,7 @@ c.NotebookApp.port = 8888" .jupyter/jupyter_notebook_config.py
 
 Now that Jupyter is configured we can start the server. You can either start the server directly, or use session management to make sure that the server keeps running even after you log out of the instance. The steps for configuring the server to run with the session management tool screen are below:
 
-```
+```{r, engine='bash', count_lines}
 screen -S jupyter
 mkdir notebook
 cd notebook
@@ -135,7 +135,7 @@ Now that you have launched the AWS Deep Learning AMI, and configured Jupyter you
 * [ Training Juypter Notebook](https://github.com/gandooke/JupyterMxNet/blob/master/ConfiguringJupyterOnAmazonDeepLearningAMI%20(2).ipynb)
 
 You can clone this notebook into your own instance by running the following command line commands:
-```
+```{r, engine='bash', count_lines}
 cd /home/ec2-user/notebook
 git clone https://github.com/gandooke/JupyterMxNet/blob/master/ConfiguringJupyterOnAmazonDeepLearningAMI%20(2).ipynb
 ```
