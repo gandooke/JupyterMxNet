@@ -33,7 +33,7 @@ You can add these rules through the AWS console while setting up the instance as
 
 ![Security Group Rules](https://s3-us-west-2.amazonaws.com/mxnetjupytersetup/SecurityGroup.jpg)
 
-You should update the Source IPs to your own know source IPs, it is NOT best practice to leave the security group wide open.
+You should update the Source IPs to your own know Source IPs, it is NOT best practice to leave the security group wide open.
 
 Optionally, you can create the security group using the AWS CLI beforehand and attach it to the instance. Keep in mind you need to update these commands to suit your own needs. In this tutorial we are using the latest Deep Learning AMI 2.0 (ami-dfb13ebf) in the us-west-2 region. The CLI commands for this are as follows:
 
