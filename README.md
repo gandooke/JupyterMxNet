@@ -6,12 +6,12 @@ Using this tutorial you will be able to install and run Jupyter using https on a
 # Launch an EC2 Instance With The Amazon Deep Learning AMI
 
 Launch an instance using the Amazon Deep Learning AMI using the AWS console:
-   https://aws.amazon.com/marketplace/pp/B01M0AXXQB
+* https://aws.amazon.com/marketplace/pp/B01M0AXXQB
 
 Navigate to the AWS Management Console:
 ![AWS Managment Console](https://s3-us-west-2.amazonaws.com/mxnetjupytersetup/Untitled.jpg)
 Or Launch the Amazon Deep Learning AMI from a CloudFormation Script:
-    https://github.com/awslabs/deeplearning-cfn/blob/master/cfn-template/deeplearning.template
+* https://github.com/awslabs/deeplearning-cfn/blob/master/cfn-template/deeplearning.template
 
 Choose an instance type sutiable for deep learning. Common choices are GPU backed instances such as g2 and p2 instance types, both of which have dedicated GPU's.
 
@@ -128,10 +128,11 @@ jupyter notebook
 
 The above steps create a notebook directory and starts the Jupyter server with a default notebook.
 
-You can now access your Jupyter server in your browser with the following URL: https://your-instances-public-ip:8888
+You can now access your Jupyter server in your browser with the following URL: 
+* https://your-instances-public-ip:8888
 
 
 ![Jupyter Notebook](https://s3-us-west-2.amazonaws.com/mxnetjupytersetup/JupyterNotebook.jpg)
 
 
-Now that you have launched the AWS Deep Learning AMI, and configured Jupyter you can run the next tutorials for learning how to use Jupyter, and many other MXNet tutorials. Check out the MXNet GitHub Repo ( https://github.com/dmlc/mxnet-notebooks) for tutorials that make it easy to start using Jupyter for computer vision, natural language processing, and recommendation systems. This GitHub repo contains a jupyter notebook that will teach you how to import the MXNet tutorials as well as basic  Jupyter commands.
+Now that you have launched the AWS Deep Learning AMI, and configured Jupyter you can run the next tutorials for learning how to use Jupyter, and many other MXNet tutorials. Check out the MXNet GitHub Repo ( https://github.com/dmlc/mxnet-notebooks) for tutorials that make it easy to start using Jupyter for computer vision, natural language processing, and recommendation systems. This GitHub repo contains a Jupyter notebook that will teach you how to import the MXNet tutorials as well as basic  Jupyter commands. 
