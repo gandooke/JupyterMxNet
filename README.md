@@ -1,9 +1,7 @@
-# JupyterMxNet
-
-## Configuring Jupyter On Amazon Deep Learning AMI
+# Configuring Jupyter On Amazon Deep Learning AMI
 
 Using this tutorial you will be able to install and run Jupyter using https on a Amazon Deep Learning AMI. AWS now also offers a Ubuntu version of the Deep Learning AMI, most of the following steps are compatible with both versions of the Deep Learning AMI.
-# Launch an EC2 Instance With The Amazon Deep Learning AMI
+## Launch an EC2 Instance With The Amazon Deep Learning AMI
 
 Launch an instance using the Amazon Deep Learning AMI using the AWS console:
 * https://aws.amazon.com/marketplace/pp/B01M0AXXQB
@@ -52,7 +50,7 @@ aws ec2 run-instances --image-id ami-dfb13ebf --count 1 --instance-type p2.xlarg
 ```
 
 
-# Setup The Environment On Your New Instance
+## Setup The Environment On Your New Instance
 
 SSH into the instance using the instances DNS name
 
@@ -82,7 +80,7 @@ PATH=$HOME/src/anaconda3/bin:$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
 ```
 
-# Configure The Jupyter Server To Use HTTPS
+## Configure The Jupyter Server To Use HTTPS
 
 Now that you have your AMI launched and your environment setup correctly we can begin to generate the configuration for Jupyter. In this tutorial, we will setup the configuration using HTTPS. If you want to use regular HTTP you can skip the following steps.
 ```
@@ -112,7 +110,7 @@ c.NotebookApp.password = u'$key'\\
 c.NotebookApp.port = 8888" .jupyter/jupyter_notebook_config.py
 ```
 
-# Running The Jupyter Server
+## Running The Jupyter Server
 
 Now that Jupyter is configured we can start the server. You can either start the server directly, or use session management to make sure that the server keeps running even after you log out of the instance. The steps for configuring the server to run with the session management tool screen are below:
 
