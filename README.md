@@ -15,10 +15,7 @@ Or Launch the Amazon Deep Learning AMI from a CloudFormation Script:
 
 Choose an instance type sutiable for deep learning. Common choices are GPU backed instances such as g2 and p2 instance types, both of which have dedicated GPU's.
 
-
-
-
-
+## Setup Security Groups
 Next, we are going to create a security group. This security group contains some specific rules to allow you to access the Jupyter server from your browser with HTTP/HTTPS. A sample ruleset used for this tutorial is below. However, for an enterprise grade enviroment, you should probably secure the source ip's to only known and trusted ips.
 
 | Type            | Protocol | Port | Source    |
@@ -138,9 +135,9 @@ You can now access your Jupyter server in your browser with the following URL:
 
 ## Setting up the training Jupyter notebook
 
-Now that you have launched the AWS Deep Learning AMI, and configured Jupyter you can run the next tutorials for learning how to use Jupyter, and many other MXNet tutorials. Check out the MXNet GitHub Repo ( https://github.com/dmlc/mxnet-notebooks) for tutorials that make it easy to start using Jupyter for computer vision, natural language processing, and recommendation systems. This GitHub repo contains a Jupyter notebook that will teach you how to import the MXNet tutorials as well as basic  Jupyter commands. 
+Now that you have launched the AWS Deep Learning AMI, and configured Jupyter you can run the next tutorials for learning how to use Jupyter, and many other MXNet tutorials. Check out the MXNet GitHub Repo ( https://github.com/dmlc/mxnet-notebooks) for tutorials that make it easy to start using Jupyter for computer vision, natural language processing, and recommendation systems. This GitHub repo contains a Jupyter notebook that will teach you how to import the above MXNet tutorials as well as some basic Jupyter commands. 
 
-*[ Training Juypter Notebook](https://github.com/gandooke/JupyterMxNet/blob/master/ConfiguringJupyterOnAmazonDeepLearningAMI%20(2).ipynb)
+* [ Training Juypter Notebook](https://github.com/gandooke/JupyterMxNet/blob/master/ConfiguringJupyterOnAmazonDeepLearningAMI%20(2).ipynb)
 
 You can clone this notebook into your own instance by running the following command line commands:
 ```
