@@ -135,4 +135,19 @@ You can now access your Jupyter server in your browser with the following URL:
 ![Jupyter Notebook](https://s3-us-west-2.amazonaws.com/mxnetjupytersetup/JupyterNotebook.jpg)
 
 
+
+
+
+## To-Do Sections:
 Now that you have launched the AWS Deep Learning AMI, and configured Jupyter you can run the next tutorials for learning how to use Jupyter, and many other MXNet tutorials. Check out the MXNet GitHub Repo ( https://github.com/dmlc/mxnet-notebooks) for tutorials that make it easy to start using Jupyter for computer vision, natural language processing, and recommendation systems. This GitHub repo contains a Jupyter notebook that will teach you how to import the MXNet tutorials as well as basic  Jupyter commands. 
+
+- [x] Deploy an AWS Deep Learning instance 
+- [x] Setup Jupyter on your own AWS Deep Learning instance
+- [ ] Create your first Jupyter notebook
+- [ ] Import an image from S3 into your notebookImport an image from S3 into your notebook
+- [ ] Import an audio file from S3 into your notebook
+
+After going through this tutorial you should be able to stand up a fully functional Jupyter notebook on the AWS Deep Learning AMI and use MXNet to run and create your own deep learning architectures.
+
+Work Hard, Have Fun, and, Make History!
+
