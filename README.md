@@ -55,7 +55,7 @@ aws ec2 run-instances --image-id ami-dfb13ebf --count 1 --instance-type p2.xlarg
 SSH into the instance using the instances DNS name
 
 ```
-ssh -i <PATH_TO_PEM> ec2-user@ec2-xx-xxx-xx-xxx.eu-west-1.compute.amazonaws.com
+ssh -i <PATH_TO_PEM> ec2-user@ec2-xx-xxx-xx-xxx.us-west-2.compute.amazonaws.com
 ```
 
 Use the AMI's pre installed Anaconda3 environment managment tool to activate a default environment named "root" with the following command:
@@ -124,7 +124,7 @@ jupyter notebook
 The above steps create a notebook directory and starts the Jupyter server with a default notebook.
 
 You can now access your Jupyter server in your browser with the following URL: 
-* https://your-instances-public-ip:8888
+* https://<Your-Instances-Public-IP>:8888
 
 You will then see a Jupyter dashboard without any notebooks. You can now create a new blank notebook, however, for this tuotiral we are going to import a training notebook to get you started with Jupyter.
 
