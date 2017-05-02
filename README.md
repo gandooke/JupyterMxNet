@@ -5,53 +5,35 @@
 Using this tutorial you will be able to install and run Jupyter using https on a Amazon Deep Learning AMI. AWS now also offers a Ubuntu version of the Deep Learning AMI, most of the following steps are compatible with both versions of the Deep Learning AMI.
 # Launch an EC2 Instance With The Amazon Deep Learning AMI
 
-    Launch an instance using the Amazon Deep Learning AMI using the AWS console: https://aws.amazon.com/marketplace/pp/B01M0AXXQB
+Launch an instance using the Amazon Deep Learning AMI using the AWS console:
+   https://aws.amazon.com/marketplace/pp/B01M0AXXQB
 
-    Navigate to the AWS Management Console:
+Navigate to the AWS Management Console:
+![AWS Managment Console](https://s3-us-west-2.amazonaws.com/mxnetjupytersetup/Untitled.jpg)
+Or Launch the Amazon Deep Learning AMI from a CloudFormation Script:
+    https://github.com/awslabs/deeplearning-cfn/blob/master/cfn-template/deeplearning.template
 
-    Or Launch the Amazon Deep Learning AMI from a CloudFormation Script: https://github.com/awslabs/deeplearning-cfn/blob/master/cfn-template/deeplearning.template
-
-    Choose an instance type sutiable for deep learning. Common choices are GPU backed instances such as g2 and p2 instance types, both of which have dedicated GPU's.
+Choose an instance type sutiable for deep learning. Common choices are GPU backed instances such as g2 and p2 instance types, both of which have dedicated GPU's.
 
 
 
-from IPython.display import Image
-from IPython.core.display import HTML 
-Image(url="https://s3-us-west-2.amazonaws.com/mxnetjupytersetup/Untitled.jpg")
 
 
 Next, we are going to create a security group. This security group contains some specific rules to allow you to access the Jupyter server from your browser with HTTP/HTTPS. A sample ruleset used for this tutorial is below. However, for an enterprise grade enviroment, you should probably secure the source ip's to only known and trusted ips.
 
-
-from IPython.display import HTML, display
-
- data = [["<b>Type</b>","<b>Protocol</b>","<b>Port Range</b>", "<b>Source</b>"],
-         ["HTTPS","TCP",443,"0.0.0.0/0"],
-         ["HTTP","TCP",80,"0.0.0.0/0"],
-         ["SSH","TCP",22,"0.0.0.0/0"],
-         ["Custom TCP Rule", "TCP", 8888, "0.0.0.0/0"]
-         ]
-
- display(HTML(
-    '<table><tr>{}</tr></table>'.format(
-        '</tr><tr>'.join(
-            '<td>{}</td>'.format('</td><td>'.join(str(_) for _ in row)) for row in data)
-        )
- ))
-
-Type 	Protocol 	Port Range 	Source
-HTTPS 	TCP 	443 	0.0.0.0/0
-HTTP 	TCP 	80 	0.0.0.0/0
-SSH 	TCP 	22 	0.0.0.0/0
-Custom TCP Rule 	TCP 	8888 	0.0.0.0/0
+| Type            | Protocol | Port | Source    |
+|-----------------|----------|------|-----------|
+| HTTP            | TCP      | 80   | 0.0.0.0/0 |
+| HTTPS           | TCP      | 443  | 0.0.0.0/0 |
+| SSH             | TCP      | 22   | 0.0.0.0/0 |
+| Custom TCP Rule | TCP      | 8888 | 0.0.0.0/0 |
 
 You can add these rules through the AWS console while setting up the instance as follows:
 
 
-from IPython.display import Image
-from IPython.core.display import HTML 
-Image(url="https://s3-us-west-2.amazonaws.com/mxnetjupytersetup/SecurityGroup.jpg")
+![Security Group Rules](https://s3-us-west-2.amazonaws.com/mxnetjupytersetup/SecurityGroup.jpg)
 
+You should update the Source IPs to your own know source IPs, it is NOT best practice to leave the security group wide open.
 
 Optionally, you can create the security group using the AWS CLI beforehand and attach it to the instance. Keep in mind you need to update these commands to suit your own needs. In this tutorial we are using the latest Deep Learning AMI 2.0 (ami-dfb13ebf) in the us-west-2 region. The CLI commands for this are as follows:
 
@@ -149,9 +131,7 @@ The above steps create a notebook directory and starts the Jupyter server with a
 You can now access your Jupyter server in your browser with the following URL: https://your-instances-public-ip:8888
 
 
-from IPython.display import Image
-from IPython.core.display import HTML 
-Image(url="	https://s3-us-west-2.amazonaws.com/mxnetjupytersetup/JupyterNotebook.jpg")
+![Jupyter Notebook](https://s3-us-west-2.amazonaws.com/mxnetjupytersetup/JupyterNotebook.jpg)
 
 
-Now that you have launched the AWS Deep Learning AMI, and configured Jupyter you can run the next tutorials for learning how to use Jupyter, and many other MXNet tutorials. Check out the MXNet GitHub Repo ( https://github.com/dmlc/mxnet-notebooks) for tutorials that make it easy to start using Jupyter for computer vision, natural language processing, and recommendation systems.
+Now that you have launched the AWS Deep Learning AMI, and configured Jupyter you can run the next tutorials for learning how to use Jupyter, and many other MXNet tutorials. Check out the MXNet GitHub Repo ( https://github.com/dmlc/mxnet-notebooks) for tutorials that make it easy to start using Jupyter for computer vision, natural language processing, and recommendation systems. This GitHub repo contains a jupyter notebook that will teach you how to import the MXNet tutorials as well as basic  Jupyter commands.
