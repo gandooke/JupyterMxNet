@@ -61,7 +61,7 @@ ssh -i <PATH_TO_PEM> ec2-user@ec2-xx-xxx-xx-xxx.us-west-2.compute.amazonaws.com
 ```
 
 Use the AMI's pre installed Anaconda3 environment managment tool to activate a default environment named "root" with the following command:
-```{r, engine='bash', count_lines}
+```bash
 
 source src/anaconda3/bin/activate root
 ```
