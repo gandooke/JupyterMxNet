@@ -48,7 +48,7 @@ aws ec2 authorize-security-group-ingress --group-name JupyterSG --protocol tcp -
 aws ec2 authorize-security-group-ingress --group-name JupyterSG --protocol tcp --port 80 --cidr 0.0.0.0/0
 
 #Launch AWS instance
-aws ec2 run-instances --image-id ami-dfb13ebf --count 1 --instance-type p2.xlarge --key-name <YOUR_KEY_NAME> --security-groups Jupyter
+aws ec2 run-instances --image-id ami-dfb13ebf --count 1 --instance-type p2.xlarge --key-name <YOUR_KEY_NAME> --security-groups JupyterSG
 ```
 
 
@@ -92,6 +92,7 @@ key=$(python -c "from notebook.auth import passwd; print(passwd())")
 ```
 
 Create a directory for your server certificates then use OpenSSL to self-sign a certificate
+
 ```bash
 
 cd ~
