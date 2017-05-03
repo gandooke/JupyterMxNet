@@ -154,10 +154,12 @@ You can then launch the notebook by clicking on it and continue with the Jupyter
 - [x] Create your first Jupyter notebook
 - [ ] Import an image from S3 into your notebook
 - [ ] Import an audio file from S3 into your notebook
+- [ ] Restore and backup your notebooks from S3
+- [ ] Call AWS Service APIs from your notebook
 - [ ] Clone MXNet sample notebooks
 - [ ] Explore MXNet sample notebooks
 
-After going through this tutorial you should be able to stand up a fully functional Jupyter notebook on the AWS Deep Learning AMI and use MXNet to run and create your own deep learning architectures.
+After going through this tutorial you should be able to stand up a fully functional Jupyter notebook on the AWS Deep Learning AMI and use MXNet to run and create your own deep learning architectures. See the ConfiguringJupyterOnAmazonDeepLearningAMI file in this repository for an introduction to using Jupyter and to finish the rest of the To-Do section.
 
 Work Hard, Have Fun, and, Make History!
 
