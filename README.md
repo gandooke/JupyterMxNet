@@ -137,7 +137,7 @@ You will then see a Jupyter dashboard without any notebooks. You can now create 
 
 Now that you have launched the AWS Deep Learning AMI, and configured Jupyter you can run the next tutorials for learning how to use Jupyter, and many other MXNet tutorials. Check out the MXNet GitHub Repo ( https://github.com/dmlc/mxnet-notebooks) for tutorials that make it easy to start using Jupyter for computer vision, natural language processing, and recommendation systems. This GitHub repo contains a Jupyter notebook that will teach you how to import the above MXNet tutorials as well as some basic Jupyter commands. 
 
-* [ Training Juypter Notebook](https://github.com/gandooke/JupyterMxNet/blob/master/ConfiguringJupyterOnAmazonDeepLearningAMI%20(2).ipynb)
+* [ Training Juypter Notebook](https://github.com/gandooke/JupyterMxNet/blob/master/ConfiguringJupyterOnAmazonDeepLearningAMI.ipynb)
 
 You can clone this notebook into your own instance by running the following command line commands:
 ```bash
