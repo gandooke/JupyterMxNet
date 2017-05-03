@@ -142,7 +142,7 @@ Now that you have launched the AWS Deep Learning AMI, and configured Jupyter you
 You can clone this notebook into your own instance by running the following command line commands:
 ```bash
 cd /home/ec2-user/notebook
-git clone https://github.com/gandooke/JupyterMxNet/blob/master/ConfiguringJupyterOnAmazonDeepLearningAMI%20(2).ipynb
+git clone https://github.com/gandooke/JupyterMxNet/blob/master/ConfiguringJupyterOnAmazonDeepLearningAMI.ipynb
 ```
 ![Jupyter Notebook](https://s3-us-west-2.amazonaws.com/mxnetjupytersetup/JupyterNotebook.jpg)
 
